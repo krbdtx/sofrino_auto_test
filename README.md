@@ -4,9 +4,10 @@
 
 #### Используемый стэк:
 
-![This is an image](data/img/images.jpg) ![This is an image](data/img/1_eRmKOtMx0I4p-Qibvhaz0w.png) ![This is an image](data/img/logo-icon.png) ![This is an image](data/img/png-clipart-jenkins-continuous-integration-continuous-delivery-ci-cd-computer-software-others-hand-logo-thumbnail.png) ![This is an image](data/img/og-image.jpg)
+![This is an image](data/img/pytest-original-wordmark.svg) ![This is an image](data/img/Allure_Report.png) ![This is an image](data/img/logo-icon.png) ![This is an image](data/img/Jenkins.png) ![This is an image](data/img/Selenoid.png)
 
 #### Cписко UI-автотестов:
+
 - [x] [поиск товара](tests/test_find_product) (позитив негатив) 
 - [x] [написать отзыв](tests/test_review) (позитив негатив)
 - [x] [Вход пользователя](tests/test_user_login) (позитив негатив)
