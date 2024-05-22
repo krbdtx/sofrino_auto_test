@@ -4,7 +4,15 @@
 
 #### Используемый стэк:
 
-![This is an image](data/img/pytest-original-wordmark.svg) ![This is an image](data/img/Allure_Report.png) ![This is an image](data/img/logo-icon.png) ![This is an image](data/img/Jenkins.png) ![This is an image](data/img/Selenoid.png)
+<div align="center">
+    <img title="Pytest" width="50" src="data/img/pytest-original-wordmark.svg">
+    <img title="Selene" width="50" src="data/img/selene.png">
+    <img title="Jenkins" width="50" height="50" src="data/img/Jenkins.png">
+    <img title="Selenoid" width="50" src="data/img/Selenoid.png">
+    <img title="Allure" width="50" src="data/img/Allure_Report.png">
+</div>
+
+![This is an image](data/img/Jenkins.png) ![This is an image](data/img/Selenoid.png)
 
 #### Cписко UI-автотестов:
 
