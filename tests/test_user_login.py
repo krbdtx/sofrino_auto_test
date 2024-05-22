@@ -10,20 +10,20 @@ user3 = User_login(email=fake.email(), password=fake.password())
 
 
 @allure.step(f"Проверка входа пользователя {user1}")
-def test_review_send_01():
+def test_login_01():
 
     top_lvl.fill_login_pgs(user1)
     top_lvl.should_login_good_pgs()
 
 
 @allure.step(f"Проверка входа пользователя {user2}")
-def test_review_send_02():
+def test_login_02():
 
     top_lvl.fill_login_pgs(user2)
     top_lvl.should_login_neg_pgs()
 
 @allure.step(f"Проверка входа пользователя {user3}")
-def test_review_send_03():
+def test_login_03():
 
     top_lvl.fill_login_pgs(user2)
     top_lvl.should_login_neg_pgs()

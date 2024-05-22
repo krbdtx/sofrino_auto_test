@@ -12,21 +12,21 @@ user3 = User_data(first_name=fake.name_female(), last_name=fake.name_male(), pho
 
 
 @allure.step(f"Проверка регистрации пользователя {user1}")
-def test_review_send_01():
+def test_register_user_01():
 
     top_lvl.fill_register_user(user1)
     top_lvl.should_register_user()
 
 
 @allure.step(f"Проверка регистрации пользователя {user2}")
-def test_review_send_02():
+def test_register_user_02():
 
     top_lvl.fill_register_user(user2)
     top_lvl.should_register_user()
 
 
 @allure.step(f"Проверка регистрации пользователя {user3}")
-def test_review_send_03():
+def test_register_user_03():
 
     top_lvl.fill_register_user(user3)
     top_lvl.should_register_user()
