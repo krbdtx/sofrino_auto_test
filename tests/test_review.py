@@ -1,11 +1,13 @@
 import allure
 from model.pages_top import top_lvl
 from data.small_bd import Review
+from faker import Faker
+fake = Faker()
 
-rev1 = Review(name='Имя', phone='123456789',
-              reviews='Здравствуйте Уважаемые коллеги, это тестовый робот для тренировки, ваш ресурс прекрасно для этого подходит, инициатор скоро выйдет на связь')
+rev1 = Review(name=fake.name(), phone=fake.phone_number(),
+              reviews=fake.text(100))
 rev2 = Review(name='Робот', phone='9876543210',
-              reviews='Здравствуйте Уважаемые коллеги, это тестовый робот для тренировки, ваш ресурс прекрасно для этого подходит, инициатор скоро выйдет на связь')
+              reviews='Здравствуйте Уважаемые коллеги, это тестовый робот для тренировки, ваш ресурс прекрасно для этого подходит, уже вышел!!!')
 
 
 @allure.step(f"Проверка отправки отзыва {rev1}")

@@ -1,7 +1,5 @@
 import allure
 
-from selene import browser, have, command
-from model import resource
 from data.small_bd import *
 from model.pages_lower_lvl import lower_lvl
 
@@ -69,5 +67,6 @@ class pages_top:
     def should_register_user(self):
         lower_lvl.should_good_register_user()
         return self
+
 
 top_lvl = pages_top()

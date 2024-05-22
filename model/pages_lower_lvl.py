@@ -1,7 +1,6 @@
 import allure
 
-from selene import browser, have, command, by, be
-from model import resource
+from selene import browser, have, by
 
 
 class pages_lower:
@@ -119,10 +118,9 @@ class pages_lower:
 
     @allure.step("Проверка успешная регистрация")
     def should_good_register_user(self):
-        #browser.element('.container-fluid').element_by(have.text('зарегистрированы')).should(have.exact_text(
-        #    '			Вы успешно зарегистрированы. Мы выслали вам данные для входа на e-mail.			'))
         browser.element(by.xpath('/html/body/div[1]/div[3]/div[1]/div/div')).should(have.text(
             'Вы успешно зарегистрированы. Мы выслали вам данные для входа на e-mail.'))
         return self
+
 
 lower_lvl = pages_lower()
