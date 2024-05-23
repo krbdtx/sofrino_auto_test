@@ -6,9 +6,12 @@
 В этом проект представлены демонстрационные тесты для практики и обучения на курсе.
 Использованы простые функции заполнения форм, нажатия кнопок, поиска текста.
 Проект структурирован по принципу 3-х уровней:
-- [x] 1. Нижний уровень, где импортируется selene и объявляются локаторы и действия с локаторами.
-- [x] 2. Средний уровень, где импортируется класс из нижнего уровня и составляются тесты.
-- [x] 3. Верхний уровень, где импортируется класс из среднего уровня и выполняется тест
+
+1. **Нижний уровень** где импортируется selene и объявляются локаторы и действия с локаторами.
+
+2. **Средний уровень** где импортируется класс из нижнего уровня и составляются тест-кейсы.
+
+3. **Верхний уровень** где импортируется класс из среднего уровня и выполняется тест-сьюты
 </details>
 
 ##### При использование данной схемы легко дебажить ошибки тестов.
@@ -16,19 +19,19 @@
 #### Используемый стэк:
 
 <div align="center">
-    <img title="Pytest" width="50" src="data/img/pytest-original-wordmark.svg">
-    <img title="Selene" width="50" src="data/img/selene.png">
-    <img title="Jenkins" width="50" height="50" src="data/img/Jenkins.png">
-    <img title="Selenoid" width="50" src="data/img/Selenoid.png">
-    <img title="Allure" width="50" src="data/img/Allure_Report.png">
+    <img title="Pytest" width="50" src="resources/img/pytest-original-wordmark.svg">
+    <img title="Selene" width="50" src="resources/img/selene.png">
+    <img title="Jenkins" width="50" height="50" src="resources/img/Jenkins.png">
+    <img title="Selenoid" width="50" src="resources/img/Selenoid.png">
+    <img title="Allure" width="50" src="resources/img/Allure_Report.png">
 </div>
 
 #### Cписко UI-автотестов:
 
-- [x] [поиск товара](tests/test_find_product) (позитив негатив) 
-- [x] [написать отзыв](tests/test_review) (позитив)
-- [x] [Вход пользователя](tests/test_user_login) (позитив негатив)
-- [x] [Регистрация пользователя](tests/test_register_user) (позитив негатив)
+- [x] [поиск товара](tests/test_find_product.py) (позитив негатив) 
+- [x] [написать отзыв](tests/test_review.py) (позитив)
+- [x] [Вход пользователя](tests/test_user_login.py) (позитив негатив)
+- [x] [Регистрация пользователя](tests/test_register_user.py) (позитив негатив)
 
 #### Для локального автоматического запуска автотестов, запустить от администратора [starter.ps1](starter.ps1)
 
@@ -51,29 +54,29 @@
 - [x] Оповещение в Телеграм
 
 <div align="center">
-    <img width="500" src="data/img/teleg_report.PNG">
+    <img width="500" src="resources/img/teleg_report.PNG">
 </div>
 
 - [x] Общий отчет
 
 <div align="center">
-    <img width="500" src="data/img/allure_rep_all_01.PNG">
+    <img width="500" src="resources/img/allure_rep_all_01.PNG">
 </div>
 
 - [x] отчет кейса с ошибкой
 
 <div align="center">
-    <img width="500" src="data/img/allure_rep_fail_01.PNG">
+    <img width="500" src="resources/img/allure_rep_fail_01.PNG">
 </div>
 
 - [x] отчет успешного кейса
 
 <div align="center">
-    <img width="500" src="data/img/allure_rep_good_01.PNG">
+    <img width="500" src="resources/img/allure_rep_good_01.PNG">
 </div>
 
 - [x] Видео пример успешного кейса регистрации пользователя 
 
 <div align="center">
-    <img width="500" src="data/img/4295e6c98140b5964a79f97b49727288.gif">
+    <img width="500" src="resources/img/4295e6c98140b5964a79f97b49727288.gif">
 </div>
