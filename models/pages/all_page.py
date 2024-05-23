@@ -30,17 +30,17 @@ class Low_lvl:
 
     @allure.step("заполнить поле имя формы отзыв")
     def fild_review_name_low(self, name):
-        browser.element('[name="test_data[name]"]').type(name)
+        browser.element('[name="data[name]"]').type(name)
         return self
 
     @allure.step("заполнить поле номер телефона формы отзыв")
     def fild_review_phone_low(self, phone):
-        browser.element('[name="test_data[phone]"]').type(phone)
+        browser.element('[name="data[phone]"]').type(phone)
         return self
 
     @allure.step("заполнить поле текст отзыва формы отзыв")
     def fild_review_low(self, reviews):
-        browser.element('[name="test_data[review]"]').type(reviews)
+        browser.element('[name="data[review]"]').type(reviews)
         return self
 
     @allure.step("Нажать кнопку отправить отзыв")

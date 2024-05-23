@@ -1,7 +1,7 @@
 import allure
 
 from test_data.data import *
-from pages.all_page import low_lvl
+from models.pages.all_page import low_lvl
 
 
 class Mid_lvl:
