@@ -38,7 +38,7 @@ class Mid_lvl:
         return self
 
     @allure.step('Заполнить поля для авториазции')
-    def fill_login_pgs(self, value: User_login):
+    def fill_login_page(self, value: User_login):
         low_lvl.open_browser(url='/login')
         low_lvl.fill_login_mail_low(value.email)
         low_lvl.fill_login_password_low(value.password)
@@ -46,12 +46,12 @@ class Mid_lvl:
         return self
 
     @allure.step('Вход с некоректными данными')
-    def should_login_neg_pgs(self):
+    def should_login_negative_page(self):
         low_lvl.should_negative_login_low()
         return self
 
     @allure.step('Вход с коректными данными')
-    def should_login_good_pgs(self):
+    def should_login_good_page(self):
         low_lvl.should_pozitiv_login_low()
         return self
 
