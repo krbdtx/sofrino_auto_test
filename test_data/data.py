@@ -2,7 +2,7 @@ import dataclasses
 
 
 @dataclasses.dataclass
-class Tovar:
+class Product:
     product: str
 
 

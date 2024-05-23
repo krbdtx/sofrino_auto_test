@@ -1,6 +1,6 @@
 import allure
-from model.pages_top import top_lvl
-from data.small_bd import Review
+from models.app import mid_lvl
+from test_data.data import Review
 from faker import Faker
 fake = Faker()
 
@@ -11,14 +11,14 @@ rev2 = Review(name='Робот', phone='9876543210',
 
 
 @allure.step(f"Проверка отправки отзыва {rev1}")
-def test_review_send_01():
+def test_review_send():
 
-    top_lvl.fild_review(rev1)
-    top_lvl.should_review()
+    mid_lvl.fild_review(rev1)
+    mid_lvl.should_review()
 
 
 @allure.step(f"Проверка отправки отзыва {rev2}")
-def test_review_send_02():
+def test_review_send():
 
-    top_lvl.fild_review(rev2)
-    top_lvl.should_review()
+    mid_lvl.fild_review(rev2)
+    mid_lvl.should_review()
