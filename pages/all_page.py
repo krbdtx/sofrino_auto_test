@@ -5,12 +5,6 @@ from selene import browser, have, by, be
 
 class Elements:
 
-    """
-    Класс работы нижний уровень
-    Тут указываются локаторы и действия над локаторами
-    TODO вынести локаторы в класс
-    """
-
     @allure.step('Открыть браузер')
     def open_browser(self, url) -> object:
         browser.open(url)
@@ -117,6 +111,7 @@ class Elements:
         browser.element('#register').all('.form-group').element_by(have.text('Пароль:')).element('.form-control').type(
             password)
         return self
+
     @allure.step("Нажать кнопку Зарегистрироваться")
     def submit_register_user(self):
         browser.element('#register').element('.row').element('.btn').click()

@@ -4,13 +4,7 @@ from test_data.data import *
 from pages.all_page import elements
 
 
-class Steps_on_pages:
-    """
-    Класс работы Средний уровень
-    тут составляются тест кейсы
-    т.к. это демо версия которая потом возможно пойдет в диплом то на разные файлы разбивать не стал
-    TODO разнести тест кейсы по разным файлам-страницам или по пакетам
-    """
+class StepsOnPages:
 
     @allure.step('Проверка работы с поиском по товарам')
     def find_product(self, find: Product):
@@ -87,4 +81,4 @@ class Steps_on_pages:
         return self
 
 
-steps_on_pages = Steps_on_pages()
+steps_on_pages = StepsOnPages()
