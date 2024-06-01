@@ -1,7 +1,7 @@
 import allure
 
 from test_data.data import *
-from models.pages.all_page import low_lvl
+from pages.all_page import low_lvl
 
 
 class Mid_lvl:
@@ -69,6 +69,16 @@ class Mid_lvl:
     @allure.step('Проверить успешность регистрации')
     def should_register_user(self):
         low_lvl.should_good_register_user()
+        return self
+
+    @allure.step('Проверить НЕ верный адрес почты')
+    def should_error_mail_user(self):
+        low_lvl.should_error_mail_register_user()
+        return self
+
+    @allure.step('Проверить пустой пароль')
+    def should_error_pass_user(self):
+        low_lvl.should_error_pass_register_user()
         return self
 
 

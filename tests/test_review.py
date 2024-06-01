@@ -1,5 +1,5 @@
 import allure
-from models.app import mid_lvl
+from pages.steps import mid_lvl
 from test_data.data import Review
 from faker import Faker
 fake = Faker()
