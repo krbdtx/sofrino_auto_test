@@ -3,7 +3,7 @@ import allure
 from selene import browser, have, by, be
 
 
-class Low_lvl:
+class Elements:
 
     """
     Класс работы нижний уровень
@@ -28,6 +28,11 @@ class Low_lvl:
             have.exact_text(f'Товары по запросу "{find}"'))
         return self
 
+    @allure.step("Проверка результата поиска по не существуюущим товарам ")
+    def should_find_non_product_low(self):
+        browser.element('.text-box').should(have.exact_text('Нам не удалось найти товар по вашему запросу.'))
+        return self
+
     @allure.step("заполнить поле имя формы отзыв")
     def fild_review_name_low(self, name):
         browser.element('[name="data[name]"]').type(name)
@@ -45,7 +50,6 @@ class Low_lvl:
 
     @allure.step("Нажать кнопку отправить отзыв")
     def submit_review_low(self):
-        #class="btn btn-light btn-light_sf btn-light_gr btn_sf-md"
         browser.element(by.text('Отправить')).click()
         return self
 
@@ -75,13 +79,13 @@ class Low_lvl:
         return self
 
     @allure.step("Проверка не успешного входа Неправильный E-mail / пароль")
-    def should_negative_login_low(self):
+    def should_error_page_login_low(self):
         browser.element('.text-danger').should(have.exact_text('Неправильный E-mail / пароль'))
         return self
 
     @allure.step("Проверка успешного входа")
-    def should_pozitiv_login_low(self):
-        browser.element('.shop-menu__link').should(have.exact_text('Мои заказы'))
+    def should_succes_page_login_low(self):
+        browser.element('.shop-menu__link').should(have.exact_text('Корзина товаров'))
         return self
 
     @allure.step("Ввод Фамилии")
@@ -119,14 +123,14 @@ class Low_lvl:
         return self
 
     @allure.step("Проверка успешная регистрация")
-    def should_good_register_user(self):
-        browser.element('.alert').should(have.text(
+    def should_succes_register_user(self):
+        browser.element('[role="alert"]').should(have.text(
             'Вы успешно зарегистрированы. Мы выслали вам данные для входа на e-mail.'))
         return self
 
     @allure.step("Проверка поля адрес почты НЕ верный адрес почты")
     def should_error_mail_register_user(self):
-        browser.element('#register').all('.form-group').element('.border-danger').should(be.visible)
+        browser.element('#register').element('.border-danger').should(be.visible)
         return self
 
     @allure.step("Проверка поля пароль НЕ верный пароль")
@@ -135,4 +139,4 @@ class Low_lvl:
         return self
 
 
-low_lvl = Low_lvl()
+elements = Elements()
