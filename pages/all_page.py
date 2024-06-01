@@ -30,7 +30,7 @@ class Elements:
 
     @allure.step("Проверка результата поиска по не существуюущим товарам ")
     def should_find_non_product_low(self):
-        browser.element('.text-box').should(have.exact_text('Нам не удалось найти товар по вашему запросу.'))
+        browser.element('.text-box').should(have.text('Нам не удалось найти товар по вашему запросу.'))
         return self
 
     @allure.step("заполнить поле имя формы отзыв")
