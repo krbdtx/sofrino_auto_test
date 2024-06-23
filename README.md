@@ -28,10 +28,10 @@
 
 #### Cписко UI-автотестов:
 
-- [x] [поиск товара](tests/test_find_product.py) (позитив негатив) 
-- [x] [написать отзыв](tests/test_review.py) (позитив)
-- [x] [Вход пользователя](tests/test_user_login.py) (позитив негатив)
-- [x] [Регистрация пользователя](tests/test_register_user.py) (позитив негатив)
+- [x] [поиск товара](tests/desktop/test_find_product.py) (позитив негатив) 
+- [x] [написать отзыв](tests/desktop/test_review.py) (позитив)
+- [x] [Вход пользователя](tests/desktop/test_user_login.py) (позитив негатив)
+- [x] [Регистрация пользователя](tests/desktop/test_register_user.py) (позитив негатив)
 
 #### Для локального автоматического запуска автотестов, запустить от администратора [starter.ps1](starter.ps1)
 
