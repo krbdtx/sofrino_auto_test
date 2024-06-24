@@ -33,6 +33,11 @@
 - [x] [Вход пользователя](tests/desktop/test_user_login.py) (позитив негатив)
 - [x] [Регистрация пользователя](tests/desktop/test_register_user.py) (позитив негатив)
 
+#### Cписко API-автотестов:
+
+- [x] [Вход пользователя](tests/desktop/test_user_login.py) (позитив негатив)
+
+
 #### Для локального автоматического запуска автотестов, запустить от администратора [starter.ps1](starter.ps1)
 
 #### Для локально ручного запуска автотестов:
@@ -44,7 +49,7 @@
 
 #### Для запуска автотестов в Jenkins
 
-- [x] 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-jonickc-sofrno_mini_test-unit14/">проект</a>
+- [x] 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-jonickc-diplom_unit22/">проект</a>
 - [x] 2. Выбрать пункт Собрать
 - [x] 2. Дождаться оповещения в Tелеграм [канал](https://t.me/+D-lMxBsV3vFhOWUy)  
 - [x] 3. Подробный отчет запуска смотреть в отчёте [Allure](https://jenkins.autotests.cloud/job/C12-jonickc-sofrno_mini_test-unit14/3/allure)
