@@ -20,5 +20,5 @@ def test_error_static_login():
 @allure.step(f"Проверка не успешного входа пользователя не корректные динамичные данные{user3}")
 def test_error_dynamic_login():
 
-    stepslogin.fill_login_page(user2)
+    stepslogin.fill_login_page(user3)
     stepslogin.should_error_login_page()

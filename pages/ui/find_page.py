@@ -12,15 +12,15 @@ class FindProduct:
         return self
 
     @allure.step("Заполнить поле поиска по товарам ")
-    def find_product_low(self, find):
+    def find_product_low(self, value):
         browser.element('.topline__search__input').click()
-        browser.element('#searchResultsInput').type(find).press_enter()
+        browser.element('#searchResultsInput').type(value).press_enter()
         return self
 
     @allure.step("Проверка результата поиска по товарам ")
-    def should_find_product_low(self, find):
+    def should_find_product_low(self, value):
         browser.element('.container-header').should(
-            have.exact_text(f'Товары по запросу "{find}"'))
+            have.exact_text(f'Товары по запросу "{value}"'))
         return self
 
     @allure.step("Проверка результата поиска по не существуюущим товарам ")
@@ -32,14 +32,14 @@ class FindProduct:
 class StepsOnFindPages:
 
     @allure.step('Проверка работы с поиском по товарам')
-    def find_product(self, find: Product):
+    def find_product(self, value: Product):
         findproduct.open_browser(url='/')
-        findproduct.find_product_low(find.product)
+        findproduct.find_product_low(value.product)
         return self
 
-    @allure.step('Результат поиска товара')
-    def should_find_product(self, find: Product):
-        findproduct.should_find_product_low(find.product)
+    @allure.step('Результат успешный поиска товара')
+    def should_find_product(self, value: Product):
+        findproduct.should_find_product_low(value.product)
         return self
 
     @allure.step('Результат не удалось найти товар')

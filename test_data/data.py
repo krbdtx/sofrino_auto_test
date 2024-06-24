@@ -1,14 +1,11 @@
 from dataclasses import dataclass
 from faker import Faker
-
 fake = Faker()
 
 
 @dataclass
 class Product:
     product: str
-    product1 = 'фываолдж'
-    product2 = 'Яйцо'
 
 
 @dataclass
@@ -31,6 +28,10 @@ class Userdata:
     phone_number: str
     email: str
     password: str
+
+
+product1 = Product(product=fake.text(10))
+product2 = Product('Яйцо')
 
 
 rev1 = ReviewData(name=fake.name(), phone=fake.phone_number(), reviews=fake.text(100))
