@@ -1,8 +1,12 @@
 import allure
+import pytest
 from pages.ui.login_page import stepslogin
 from test_data.data import user1, user2, user3
 
 
+@allure.tag('web')
+@allure.epic('Авторизация UI')
+@pytest.mark.api_test
 @allure.step(f"Проверка Успешный входа пользователя корректные данные{user1}")
 def test_succes_login():
 
@@ -10,6 +14,9 @@ def test_succes_login():
     stepslogin.should_login_user_lk_page()
 
 
+@allure.tag('web')
+@allure.epic('Авторизация UI')
+@pytest.mark.api_test
 @allure.step(f"Проверка не успешного входа пользователя не корректные статичные данные{user2}")
 def test_error_static_login():
 
@@ -17,6 +24,9 @@ def test_error_static_login():
     stepslogin.should_error_login_page()
 
 
+@allure.tag('web')
+@allure.epic('Авторизация UI')
+@pytest.mark.api_test
 @allure.step(f"Проверка не успешного входа пользователя не корректные динамичные данные{user3}")
 def test_error_dynamic_login():
 

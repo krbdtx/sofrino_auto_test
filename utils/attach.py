@@ -1,12 +1,17 @@
 import json
 import allure
 from allure_commons.types import AttachmentType
+from requests import Response
 import logging
 
 
 def add_screenshot(browser):
     png = browser.driver.get_screenshot_as_png()
-    allure.attach(body=png, name='screenshot', attachment_type=AttachmentType.PNG, extension='.png')
+    allure.attach(
+        body=png,
+        name='screenshot',
+        attachment_type=AttachmentType.PNG,
+        extension='.png')
 
 
 def add_logs(browser):
@@ -28,22 +33,36 @@ def add_video(browser):
 
 
 def request_url_and_body(response):
-    allure.attach(body=response.request.url, name="Request URL", attachment_type=AttachmentType.TEXT, extension="txt")
+    allure.attach(
+        body=response.request.url,
+        name="Request URL",
+        attachment_type=AttachmentType.TEXT,
+        extension="txt")
 
-    allure.attach(body=response.request.body, name="Request payload",
-                  attachment_type=AttachmentType.TEXT, extension="txt")
+    allure.attach(
+        body=response.request.body,
+        name="Request payload",
+        attachment_type=AttachmentType.TEXT,
+        extension="txt")
 
 
 def response_json_and_cookies(response):
-    allure.attach(body=json.dumps(response.json(), indent=2, ensure_ascii=True), name="Response",
-                  attachment_type=AttachmentType.JSON, extension="json")
+    allure.attach(
+        body=json.dumps(response.json(),
+                        indent=4,
+                        ensure_ascii=True),
+        name="Response",
+        attachment_type=AttachmentType.JSON,
+        extension="json")
 
-    allure.attach(body=str(response.cookies), name="Cookies", attachment_type=AttachmentType.TEXT, extension="txt")
+    allure.attach(
+        body=str(response.cookies),
+        name="Cookies",
+        attachment_type=AttachmentType.TEXT,
+        extension="txt")
 
 
 def logging_response(response):
     logging.info(response.request.url)
     logging.info(response.status_code)
     logging.info(response.text)
-
-
