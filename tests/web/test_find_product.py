@@ -20,3 +20,12 @@ def test_find_non_product():
 def test_find_exists_product():
     stepsfindproduct.find_product(exists_product)
     stepsfindproduct.should_find_product(exists_product)
+
+
+@allure.tag('web')
+@allure.epic('Проверка поиск UI')
+@pytest.mark.web
+@allure.step(f"Проверка поиск не существуюущего товара2 фейковая ошибка {fake_product}")
+def test_find_non_product():
+    stepsfindproduct.find_product(fake_product)
+    stepsfindproduct.should_find_product(fake_product)

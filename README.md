@@ -90,6 +90,14 @@
 
 ![allure_rep_good_01.PNG](resources/img/allure_rep_good_01.PNG)
 
+- [x] Тест-кейсы в Allure TestOps 
+
+![allureTestOps.PNG](resources/img/allureTestOps.PNG)
+
+- [x] Пример ручных тест-кейсов в Allure TestOps 
+
+![allureTestOps_case.PNG](resources/img/allureTestOps_case.PNG)
+
 - [x] Видео пример успешного кейса регистрации пользователя 
 
 ![4295e6c98140b5964a79f97b49727288.gif](resources/img/4295e6c98140b5964a79f97b49727288.gif)
