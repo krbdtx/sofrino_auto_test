@@ -17,7 +17,7 @@ if (-Not (Get-Command python -ErrorAction SilentlyContinue)) {
     $env:Path += ";$((Get-Command python).Path)"
 }
 
-$repoUrl = "https://github.com/krbdtx/qa_hw_14.git"
+$repoUrl = "https://github.com/krbdtx/sofrino_auto_test.git"
 $repoPath = "C:\path\to\clone\repository"
 
 Write-Output "Клонирование репозитория..."
@@ -36,7 +36,30 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 Write-Output "Запуск тестов..."
-pytest
+Write-Output "Выберете желаемый уровень тестов для запуска:"
+Write-Output "1. Web"
+Write-Output "2. API"
+#Write-Output "3. Mobile"
+$testType = Read-Host "Введите номер уровня"
+
+switch ($testType) {
+    1 {
+        Write-Output "Запуск UI тестов в Web..."
+        pytest tests/web
+    }
+    2 {
+        Write-Output "Запуск API тестов..."
+        pytest tests/api
+    }
+    3 {
+        Write-Output "Запуск тестов на мобильном устройстве..."
+        pytest tests/mobile
+    }
+    default {
+        Write-Output "Ошибка не верный ввод."
+        exit 1
+    }
+}
 
 Write-Output "Получение отчета..."
 allure serve allure-results
