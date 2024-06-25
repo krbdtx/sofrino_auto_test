@@ -5,13 +5,13 @@ import json
 from selene import browser, have
 from allure_commons._allure import step
 from selene.support.conditions import have
-from sofrino_auto_test.test_data import user1, user2
+from sofrino_auto_test.test_data.data import user1, user2
 from sofrino_auto_test.utils import attach
 
 
 @allure.tag('api')
 @allure.epic('Авторизация API')
-@pytest.mark.api_test
+@pytest.mark.api
 def test_login_api(base_api_url):
     with step("Успешная Авторизация пользователя через API"):
         payload = {"action": "login", "email": user1.email, "password": user1.password}
@@ -38,7 +38,7 @@ def test_login_api(base_api_url):
 
 @allure.tag('api')
 @allure.epic('Авторизация API')
-@pytest.mark.api_test
+@pytest.mark.api
 def test_failed_login_api(base_api_url):
     with step("Не успешная Авторизация пользователя через API"):
         payload = {"action": "login", "email": user1.email, "password": user2.password}

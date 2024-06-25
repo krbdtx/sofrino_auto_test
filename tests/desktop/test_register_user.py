@@ -6,7 +6,7 @@ from sofrino_auto_test.test_data.data import registeruser1, registeruser2, regis
 
 @allure.tag('web')
 @allure.epic('Регистрация UI')
-@pytest.mark.web_test
+@pytest.mark.web
 @allure.step(f"Проверка регистрации сгенерированного пользователя {registeruser1}")
 def test_succes_register_user():
 
@@ -16,7 +16,7 @@ def test_succes_register_user():
 
 @allure.tag('web')
 @allure.epic('Регистрация UI')
-@pytest.mark.web_test
+@pytest.mark.web
 @allure.step(f"Проверка регистрации не коректный e-mail {registeruser2}")
 def test_error_mail_register_user():
 
@@ -26,7 +26,7 @@ def test_error_mail_register_user():
 
 @allure.tag('web')
 @allure.epic('Регистрация UI')
-@pytest.mark.web_test
+@pytest.mark.web
 @allure.step(f"Проверка регистрации сгенерированного пользователя Пустой пароль {registeruser3}")
 def test_error_pass_register_user():
 
