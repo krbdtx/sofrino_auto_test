@@ -90,7 +90,7 @@
 
 ![allure_rep_good_01.PNG](resources/img/allure_rep_good_01.PNG)
 
-- [x] Тест-кейсы в Allure TestOps 
+- [x] Отчет в Allure TestOps 
 
 ![allureTestOps.PNG](resources/img/allureTestOps.PNG)
 
