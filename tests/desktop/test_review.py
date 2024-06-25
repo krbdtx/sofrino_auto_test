@@ -1,7 +1,7 @@
 import allure
 import pytest
-from pages.ui.review_page import stepsreviuw
-from test_data.data import rev1, rev2
+from sofrino_auto_test.pages.ui.review_page import stepsreviuw
+from sofrino_auto_test.test_data.data import rev1, rev2
 
 
 @allure.tag('web')

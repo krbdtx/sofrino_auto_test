@@ -1,7 +1,7 @@
 import allure
 import pytest
-from pages.ui.login_page import stepslogin
-from test_data.data import user1, user2, user3
+from sofrino_auto_test.pages.ui.login_page import stepslogin
+from sofrino_auto_test.test_data.data import user1, user2, user3
 
 
 @allure.tag('web')

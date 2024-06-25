@@ -1,7 +1,7 @@
 import allure
 import pytest
-from pages.ui.register_page import stepsregistration
-from test_data.data import registeruser1, registeruser2, registeruser3
+from sofrino_auto_test.pages.ui.register_page import stepsregistration
+from sofrino_auto_test.test_data.data import registeruser1, registeruser2, registeruser3
 
 
 @allure.tag('web')

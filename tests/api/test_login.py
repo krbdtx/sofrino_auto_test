@@ -5,8 +5,8 @@ import json
 from selene import browser, have
 from allure_commons._allure import step
 from selene.support.conditions import have
-from test_data.data import user1, user2
-from utils import attach
+from sofrino_auto_test.test_data import user1, user2
+from sofrino_auto_test.utils import attach
 
 
 @allure.tag('api')

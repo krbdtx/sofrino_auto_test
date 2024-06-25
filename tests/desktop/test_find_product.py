@@ -1,7 +1,7 @@
 import allure
 import pytest
-from pages.ui.find_page import stepsfindproduct
-from test_data.data import product1, product2
+from sofrino_auto_test.pages.ui.find_page import stepsfindproduct
+from sofrino_auto_test.test_data.data import product1, product2
 
 
 @allure.tag('web')

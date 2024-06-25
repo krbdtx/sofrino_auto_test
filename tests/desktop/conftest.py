@@ -3,7 +3,7 @@ from selene import browser
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from utils import attach
+from sofrino_auto_test.utils import attach
 from dotenv import load_dotenv
 
 DEFAULT_BROWSER_VERSION = "122.0"
