@@ -1,6 +1,6 @@
 import allure
 
-from sofrino_auto_test.test_data import Userdata
+from sofrino_auto_test.test_data.data import Userdata
 from selene import browser, have, be
 
 

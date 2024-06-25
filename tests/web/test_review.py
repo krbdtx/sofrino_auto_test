@@ -9,7 +9,6 @@ from sofrino_auto_test.test_data.data import rev1, rev2
 @pytest.mark.web
 @allure.step(f"Проверка отправки отзыва: генерируемые  данные {rev1}")
 def test_review_dynamic_send():
-
     stepsreviuw.fild_review(rev1)
     stepsreviuw.should_review()
 
@@ -19,6 +18,5 @@ def test_review_dynamic_send():
 @pytest.mark.web
 @allure.step(f"Проверка отправки отзыва: статичные данные {rev2}")
 def test_review_static_send():
-
     stepsreviuw.fild_review(rev1)
     stepsreviuw.should_review()

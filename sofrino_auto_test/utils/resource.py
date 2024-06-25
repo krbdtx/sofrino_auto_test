@@ -1,6 +1,5 @@
-from pathlib import Path
-
 import tests
+from pathlib import Path
 
 
 def path(file_name):

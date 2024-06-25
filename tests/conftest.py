@@ -1,6 +1,6 @@
 import os
-from selene import browser
 import pytest
+from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from sofrino_auto_test.utils import attach

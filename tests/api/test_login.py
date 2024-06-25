@@ -53,4 +53,3 @@ def test_failed_login_api(base_api_url):
 
     with step("Проверка ответа API не успешная авторизация"):
         assert 'loginErrors' in result.json()
-
