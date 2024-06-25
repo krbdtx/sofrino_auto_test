@@ -1,6 +1,6 @@
 import allure
 
-from sofrino_auto_test.test_data.data import Userlogin
+from sofrino_auto_test.test_data.data import UserLogin
 from selene import browser, have, by
 
 
@@ -37,7 +37,7 @@ class LogIn:
         return self
 
     @allure.step("Проверка успешного входа")
-    def should_succes_page_login_low(self):
+    def should_success_page_login_low(self):
         browser.element('.shop-menu__link').should(have.exact_text('Корзина товаров'))
         return self
 
@@ -45,7 +45,7 @@ class LogIn:
 class StepsLogIn:
 
     @allure.step('Заполнить поля для авториазции')
-    def fill_login_page(self, value: Userlogin):
+    def fill_login_page(self, value: UserLogin):
         login.open_browser(url='/login')
         login.fill_login_mail_low(value.email)
         login.fill_login_password_low(value.password)
@@ -59,7 +59,7 @@ class StepsLogIn:
 
     @allure.step('Проверка Вход с коректными данными')
     def should_login_user_lk_page(self):
-        login.should_succes_page_login_low()
+        login.should_success_page_login_low()
         return self
 
 

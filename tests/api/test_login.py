@@ -5,7 +5,7 @@ import json
 from selene import browser, have
 from allure_commons._allure import step
 from selene.support.conditions import have
-from sofrino_auto_test.test_data.data import user1, user2
+from sofrino_auto_test.test_data.data import exists_user, error_user
 from sofrino_auto_test.utils import attach
 
 
@@ -14,7 +14,7 @@ from sofrino_auto_test.utils import attach
 @pytest.mark.api
 def test_login_api(base_api_url):
     with step("Успешная Авторизация пользователя через API"):
-        payload = {"action": "login", "email": user1.email, "password": user1.password}
+        payload = {"action": "login", "email": exists_user.email, "password": exists_user.password}
         payload_json = json.dumps(payload)
         headers = {
             'content-type': 'application/json; charset=UTF-8',
@@ -41,7 +41,7 @@ def test_login_api(base_api_url):
 @pytest.mark.api
 def test_failed_login_api(base_api_url):
     with step("Не успешная Авторизация пользователя через API"):
-        payload = {"action": "login", "email": user1.email, "password": user2.password}
+        payload = {"action": "login", "email": exists_user.email, "password": error_user.password}
         payload_json = json.dumps(payload)
         headers = {
             'content-type': 'application/json; charset=UTF-8',

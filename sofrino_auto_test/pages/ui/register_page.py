@@ -1,6 +1,6 @@
 import allure
 
-from sofrino_auto_test.test_data.data import Userdata
+from sofrino_auto_test.test_data.data import UserData
 from selene import browser, have, be
 
 
@@ -66,7 +66,7 @@ class Registration:
 class StepsRegistration:
 
     @allure.step('Заполнить поля регистрации')
-    def fill_register_user(self, value: Userdata):
+    def fill_register_user(self, value: UserData):
         registration.open_browser(url='/login?state=register')
         registration.fill_user_last_name(value.first_name)
         registration.fill_user_first_name(value.first_name)
