@@ -41,6 +41,10 @@
 - [x] [Вход пользователя](tests/api/test_login.py) (позитив негатив)
 - * Вход актуального пользователя. (Ожидаем Успех)
 - * Вход актуального пользователя с не коректным паролем. (Ожидаем Ошибку)
+- [x] [Получение корзины](tests/api/test_get_api.py) (позитив)
+- * Получение корзины. (Ожидаем Успех)
+- [x] [Получение формы отзыва](tests/api/test_get_api.py) (позитив)
+- * Получение формы отзыва. (Ожидаем Успех)
 
 
 #### Для локального автоматического запуска автотестов, запустить от администратора [starter.ps1](starter.ps1)
@@ -65,10 +69,10 @@
 
 #### Для запуска автотестов в Jenkins
 
-- [x] 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-jonickc-diplom_unit22/">проект</a>
+- [x] 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-jonickc-diplom-TestOps-unit22/">проект</a>
 - [x] 2. Выбрать пункт Собрать
 - [x] 2. Дождаться оповещения в Tелеграм [канал](https://t.me/+D-lMxBsV3vFhOWUy)  
-- [x] 3. Подробный отчет запуска смотреть в отчёте [Allure](https://jenkins.autotests.cloud/job/C12-jonickc-sofrno_mini_test-unit14/3/allure)
+- [x] 3. Подробный отчет запуска смотреть в отчёте [Allure](https://jenkins.autotests.cloud/job/C12-jonickc-diplom-TestOps-unit22/allure/)
 
 #### Пример визуальных отчетов:
 
