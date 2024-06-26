@@ -15,9 +15,11 @@
     <img title="Jenkins" width="50" height="50" src="resources/img/Jenkins.png">
     <img title="Selenoid" width="50" src="resources/img/Selenoid.png">
     <img title="Allure" width="50" src="resources/img/Allure_Report.png">
-    <img title="Allure" width="50" src="resources/img/appium.png">
-    <img title="Allure" width="50" src="resources/img/browserstack.png">
-    <img title="Allure" width="50" src="resources/img/telegram.png">
+    <img title="appium" width="50" src="resources/img/appium.png">
+    <img title="browserstack" width="50" src="resources/img/browserstack.png">
+    <img title="telegram" width="50" src="resources/img/telegram.png">
+    <img title="allure_testops" width="50" src="resources/img/allure_testops.png">
+    <img title="jira" width="50" src="resources/img/jira_logo.png">
 </div>
 
 #### Cписко UI-автотестов в web:
