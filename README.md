@@ -126,6 +126,10 @@
 
 ![jira.PNG](resources/img/jira.PNG)
 
+- [x] Пример свзяи с Jira, теста с ошибкой.
+
+![jira_error.PNG](resources/img/jira_error.PNG)
+
 - [x] Видео пример успешного кейса регистрации пользователя
 
 ![4295e6c98140b5964a79f97b49727288.gif](resources/img/4295e6c98140b5964a79f97b49727288.gif)
