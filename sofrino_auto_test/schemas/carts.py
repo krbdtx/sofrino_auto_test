@@ -118,3 +118,39 @@ del_item = {
         "hasStop"
     ]
 }
+
+view_all_product_in_cart = {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "liked": {
+      "type": "array",
+      "items": {}
+    },
+    "compared": {
+      "type": "array",
+      "items": {}
+    },
+    "carted": {
+      "type": "object",
+      "properties": {
+        "allCartAmount": {
+          "type": "integer"
+        },
+        "cartItemsAmounts": {
+          "type": "array",
+          "items": {}
+        }
+      },
+      "required": [
+        "allCartAmount",
+        "cartItemsAmounts"
+      ]
+    }
+  },
+  "required": [
+    "liked",
+    "compared",
+    "carted"
+  ]
+}

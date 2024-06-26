@@ -123,6 +123,10 @@
 
 ![allureTestOps_case.PNG](resources/img/allureTestOps_case.PNG)
 
+- [x] Пример интеграции с Jira
+
+![jira.PNG](resources/img/jira.PNG)
+
 - [x] Видео пример успешного кейса регистрации пользователя
 
 ![4295e6c98140b5964a79f97b49727288.gif](resources/img/4295e6c98140b5964a79f97b49727288.gif)
