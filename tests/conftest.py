@@ -60,6 +60,14 @@ def setup_browser(request):
     browser.quit()
 
 
+def pytest_configure(config):
+    config.addinivalue_line("markers", "web")
+
+@pytest.fixture(autouse=True)
+def auto_use_fixture(request):
+    if request.node.get_closest_marker("web"):
+        request.getfixturevalue("setup_browser")
+
 @pytest.fixture()
 def base_api_url():
     base_url = 'https://sofrino.ru'

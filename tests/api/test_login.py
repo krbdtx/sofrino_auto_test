@@ -14,7 +14,7 @@ endpoint = '/login'
 @allure.tag('api')
 @allure.epic('Авторизация API')
 @pytest.mark.api
-@pytest.fixture
+@pytest.mark.web
 def test_login_api(base_api_url):
     with step("Успешная Авторизация пользователя через API"):
         payload = {"action": "login", "email": exists_user.email, "password": exists_user.password}
