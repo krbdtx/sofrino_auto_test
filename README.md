@@ -84,8 +84,7 @@
 
 #### Для запуска автотестов в Jenkins
 
-- [x] 
-    1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-jonickc-diplom-TestOps-unit22/">
+- [x] 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-jonickc-diplom-TestOps-unit22/">
        проект</a>
 - [x] 
     2. Выбрать пункт Собрать
