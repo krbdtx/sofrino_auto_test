@@ -2,6 +2,7 @@ import os
 import json
 import allure
 import logging
+from requests import Response
 from allure_commons.types import AttachmentType
 from dotenv import load_dotenv
 
@@ -35,37 +36,46 @@ def add_video(browser):
     allure.attach(html, 'video_' + browser.driver.session_id, AttachmentType.HTML, '.html')
 
 
-def request_url_and_body(response):
+def response_logging(response: Response):
+    logging.info("Request: " + response.request.url)
+    logging.info("INFO Request body: " + response.request.body)
+    logging.info("Request headers: " + str(response.request.headers))
+    logging.info("Response code " + str(response.status_code))
+    logging.info("Response: " + response.text)
+
+
+def response_attaching(response: Response):
     allure.attach(
         body=response.request.url,
-        name="Request URL",
+        name="Request url",
         attachment_type=AttachmentType.TEXT,
-        extension="txt")
+        extension='.txt'
+    )
 
     allure.attach(
-        body=response.request.body,
-        name="Request payload",
+        body=str(response.status_code),
+        name='response status code',
         attachment_type=AttachmentType.TEXT,
-        extension="txt")
-
-
-def response_json_and_cookies(response):
-    allure.attach(
-        body=json.dumps(response.json(),
-                        indent=4,
-                        ensure_ascii=True),
-        name="Response",
-        attachment_type=AttachmentType.JSON,
-        extension="json")
+        extension='.txt'
+    )
 
     allure.attach(
-        body=str(response.cookies),
-        name="Cookies",
+        body=response.text,
+        name='response text',
         attachment_type=AttachmentType.TEXT,
-        extension="txt")
+        extension='.txt'
+    )
 
-
-def logging_response(response):
-    logging.info(response.request.url)
-    logging.info(response.status_code)
-    logging.info(response.text)
+    if response.request.body:
+        allure.attach(
+            body=json.dumps(str(response.request.body)),
+            name="request body",
+            attachment_type=AttachmentType.JSON,
+            extension=".json",
+        )
+        allure.attach(
+            body=json.dumps(response.json(), indent=4, ensure_ascii=True),
+            name="response",
+            attachment_type=AttachmentType.JSON,
+            extension=".json",
+        )
