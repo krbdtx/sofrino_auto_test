@@ -1,7 +1,7 @@
 import allure
+from selene import browser, have, by
 
 from sofrino_auto_test.test_data.data import UserLogin
-from selene import browser, have, by
 
 
 class LogIn:

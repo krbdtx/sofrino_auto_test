@@ -1,7 +1,7 @@
 import allure
+from selene import browser, have
 
 from sofrino_auto_test.test_data.data import Product
-from selene import browser, have
 
 
 class FindProduct:

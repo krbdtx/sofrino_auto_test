@@ -1,10 +1,11 @@
-import os
 import json
-import allure
 import logging
-from requests import Response
+import os
+
+import allure
 from allure_commons.types import AttachmentType
 from dotenv import load_dotenv
+from requests import Response
 
 load_dotenv()
 

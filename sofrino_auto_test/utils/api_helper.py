@@ -1,5 +1,7 @@
-import requests
 import json
+
+import requests
+
 from sofrino_auto_test.utils.attach import response_logging, response_attaching
 
 

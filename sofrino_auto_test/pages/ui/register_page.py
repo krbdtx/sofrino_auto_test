@@ -1,7 +1,7 @@
 import allure
+from selene import browser, have, be
 
 from sofrino_auto_test.test_data.data import UserData
-from selene import browser, have, be
 
 
 class Registration:
