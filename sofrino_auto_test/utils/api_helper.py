@@ -1,6 +1,6 @@
 import requests
 import json
-from sofrino_auto_test.utils.attach import logging_response, response_logging, response_attaching
+from sofrino_auto_test.utils.attach import response_logging, response_attaching
 
 
 def api_request(base_api_url, endpoint, method, params=None):
