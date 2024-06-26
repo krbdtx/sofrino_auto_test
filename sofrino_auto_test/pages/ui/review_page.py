@@ -54,5 +54,5 @@ class StepsReview:
         return self
 
 
-stepsreviuw = StepsReview()
+steps_reviuw = StepsReview()
 review = Review()

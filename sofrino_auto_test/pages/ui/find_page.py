@@ -33,20 +33,20 @@ class StepsOnFindPages:
 
     @allure.step('Проверка работы с поиском по товарам')
     def find_product(self, value: Product):
-        findproduct.open_browser(url='/')
-        findproduct.find_product_low(value.product)
+        findp_roduct.open_browser(url='/')
+        findp_roduct.find_product_low(value.product)
         return self
 
     @allure.step('Результат успешный поиска товара')
     def should_find_product(self, value: Product):
-        findproduct.should_find_product_low(value.product)
+        findp_roduct.should_find_product_low(value.product)
         return self
 
     @allure.step('Результат не удалось найти товар')
     def should_find_non_product(self):
-        findproduct.should_find_non_product_low()
+        findp_roduct.should_find_non_product_low()
         return self
 
 
-stepsfindproduct = StepsOnFindPages()
-findproduct = FindProduct()
+steps_findp_roduct = StepsOnFindPages()
+findp_roduct = FindProduct()

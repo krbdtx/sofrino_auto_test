@@ -63,5 +63,5 @@ class StepsLogIn:
         return self
 
 
-stepslogin = StepsLogIn()
+steps_login = StepsLogIn()
 login = LogIn()

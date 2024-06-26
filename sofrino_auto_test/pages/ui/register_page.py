@@ -47,7 +47,7 @@ class Registration:
         return self
 
     @allure.step("Проверка успешная регистрация")
-    def should_succes_register_user(self):
+    def should_success_register_user(self):
         browser.element('[role="alert"]').should(have.text(
             'Вы успешно зарегистрированы. Мы выслали вам данные для входа на e-mail.'))
         return self
@@ -78,7 +78,7 @@ class StepsRegistration:
 
     @allure.step('Проверить успешность регистрации')
     def should_register_user(self):
-        registration.should_succes_register_user()
+        registration.should_success_register_user()
         return self
 
     @allure.step('Проверить НЕ верный адрес почты')
@@ -92,5 +92,5 @@ class StepsRegistration:
         return self
 
 
-stepsregistration = StepsRegistration()
+steps_registration = StepsRegistration()
 registration = Registration()
